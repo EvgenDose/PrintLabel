@@ -19,6 +19,7 @@ namespace PrintLabel
 
         public Form1()
         {
+            //Добавление вариантов в комбо
             InitializeComponent();
             var preparat = File.ReadAllLines("C:\\Users\\Admin\\source\\repos\\PrintLabel\\pr.txt").ToList();
             for (int i = 0; i < preparat.Count; i++)
@@ -45,7 +46,7 @@ namespace PrintLabel
             }
         }
 
-        //Добавление вариантов в комбо и результат выбора
+        //Обработка результата выбора в комбо
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex >= 0)
