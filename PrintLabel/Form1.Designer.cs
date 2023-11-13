@@ -305,6 +305,7 @@
             ClientSize = new Size(965, 328);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";

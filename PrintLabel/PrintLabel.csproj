@@ -12,6 +12,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
     <UseWPF>False</UseWPF>
+    <ApplicationIcon>Properties\print.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|AnyCPU'">
@@ -29,6 +30,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Optimize>True</Optimize>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Properties\print.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Neodynamic.SDK.ZPLPrinter" Version="5.0.23.829" />

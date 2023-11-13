@@ -39,7 +39,7 @@ namespace PrintLabel
             string path = dlg.FileName;
             textBox1.Text = path;
             StreamReader sr = new StreamReader(path);
-            while ((line = sr.ReadLine())!=null)
+            while ((line = sr.ReadLine()) != null)
             {
                 alllines.Add(line);
                 label8.Text = line;
@@ -130,7 +130,7 @@ namespace PrintLabel
                     for (int i = 0; i < zpl.Count; i++)
                     {
                         if (l.Length < 20)
-                            {
+                        {
                             modifiedZpl.Add(zpl[i]);
                             if (i == 0)
                             {
@@ -186,7 +186,7 @@ namespace PrintLabel
                                 modifiedZpl.Add(k);
                             }
                         }
-                       
+
                     }
 
                     File.WriteAllLines("box.zpl", modifiedZpl);
@@ -210,7 +210,7 @@ namespace PrintLabel
                     process.WaitForExit();
                     Thread.Sleep(1000);
                 }
-            }            
+            }
         }
     }
 }
