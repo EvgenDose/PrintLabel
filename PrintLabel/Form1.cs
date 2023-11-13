@@ -11,6 +11,7 @@ namespace PrintLabel
     public partial class Form1 : Form
     {
         //Глобальные переменные
+        String k;
         String line;
         List<string> alllines = new List<string>();
         string[] tuple;
@@ -128,31 +129,64 @@ namespace PrintLabel
                     var modifiedZpl = new List<string>();
                     for (int i = 0; i < zpl.Count; i++)
                     {
-                        modifiedZpl.Add(zpl[i]);
-                        if (i == 0)
-                        {
-                            modifiedZpl.Add(label4.Text);
+                        if (l.Length > 20)
+                            {
+                            modifiedZpl.Add(zpl[i]);
+                            if (i == 0)
+                            {
+                                modifiedZpl.Add(label4.Text);
+                            }
+                            if (i == 1)
+                            {
+                                modifiedZpl.Add(label14.Text);
+                            }
+                            if (i == 2)
+                            {
+                                modifiedZpl.Add(label9.Text);
+                            }
+                            if (i == 3)
+                            {
+                                modifiedZpl.Add(label11.Text);
+                            }
+                            if (i == 4)
+                            {
+                                modifiedZpl.Add(label12.Text);
+                            }
+                            if (i == 5)
+                            {
+                                modifiedZpl.Add(l);
+                            }
                         }
-                        if (i == 1)
+                        else
                         {
-                            modifiedZpl.Add(label14.Text);
+                            k = l.Substring(2);
+                            modifiedZpl.Add(zpl[i]);
+                            if (i == 0)
+                            {
+                                modifiedZpl.Add(label4.Text);
+                            }
+                            if (i == 1)
+                            {
+                                modifiedZpl.Add(label14.Text);
+                            }
+                            if (i == 2)
+                            {
+                                modifiedZpl.Add(label9.Text);
+                            }
+                            if (i == 3)
+                            {
+                                modifiedZpl.Add(label11.Text);
+                            }
+                            if (i == 4)
+                            {
+                                modifiedZpl.Add(label12.Text);
+                            }
+                            if (i == 5)
+                            {
+                                modifiedZpl.Add(k);
+                            }
                         }
-                        if (i == 2)
-                        {
-                            modifiedZpl.Add(label9.Text);
-                        }
-                        if (i == 3)
-                        {
-                            modifiedZpl.Add(label11.Text);
-                        }
-                        if (i == 4)
-                        {
-                            modifiedZpl.Add(label12.Text);
-                        }
-                        if (i == 5)
-                        {
-                            modifiedZpl.Add(l);
-                        }
+                       
                     }
 
                     File.WriteAllLines("box.zpl", modifiedZpl);
