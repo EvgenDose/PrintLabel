@@ -129,7 +129,7 @@ namespace PrintLabel
                     var modifiedZpl = new List<string>();
                     for (int i = 0; i < zpl.Count; i++)
                     {
-                        if (l.Length > 20)
+                        if (l.Length < 20)
                             {
                             modifiedZpl.Add(zpl[i]);
                             if (i == 0)
